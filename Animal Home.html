@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <title>Project Elixir</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        #start{
+            min-height: 100vh;
+            background: linear-gradient(#2b1055,#7597de);
+        }
+        ::-webkit-scrollbar{
+            width: 0;
+        }
+        #scrollPath{
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 10px;
+            height: 100%;
+            background: rgba(255,255,255,0.05);
+        }
+        #progressbar{
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 10px;
+            background: linear-gradient(to top, #008aff, #00ffe7);
+            animation: animate 5s  linear infinite;
+        }
+        @keyframes animate{
+            0%,100%{
+                filter: hue-rotate(0deg);
+            }
+            50%{
+                filter: hue-rotate(360deg);
+            }
+        }
+        #progressbar:before{
+            content:  '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to top, #008aff, #00ffe7);
+            filter: blur(10px);
+        }
+        #progressbar:after{
+            content:  '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to top, #008aff, #00ffe7);
+            filter: blur(30px);
+        }
+        #elixir{
+            color: #fff;
+            font-weight: 700;
+            text-decoration: none;
+            font-size: 2em;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        header{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 30px 100px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header ul{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        header ul li{
+            list-style: none;
+            margin-left: 20px;
+        }
+        header ul li a{
+            text-decoration: none;
+            padding: 6px 15px;
+            color: #fff;
+            border-radius: 20px;
+        }
+        header ul li a:hover{
+            background: #fff;
+            color: #2b1055;
+        }
+        .active{
+            background: #fff;
+            color: #2b1055;
+        }
+        #ft{
+            width: 100%;
+            height: 100vh;
+            padding: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        #text{
+            position: absolute;
+            color: #fff;
+            white-space: nowrap;
+            font-size: 3em;
+            font-family: "Poppins", sans-serif;
+        }
+        #text2{
+            position: absolute;
+            color: #fff;
+            white-space: nowrap;
+            font-size: 30px;
+            font-family: "Poppins", sans-serif;
+        }
+        #back1{
+            background: #7597de;
+            min-height: 2400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #back2{
+            background: #7597de;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container{
+            position: relative;
+            width: 1100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 30px;
+        }
+        .container .card{
+            max-width: 400px;
+            height: 345px;
+            position: relative;
+            background: #fff;
+            margin: 180px;
+            padding: 20px 15px;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+            transition: 0.3s ease-in-out;
+        }
+        .container .card:hover{
+            height: 700px;
+        }
+        .container .card .imgBx{
+            position: relative;
+            width: 300px;
+            height: 400px;
+            top: -60px;
+            left: 20px;
+            z-index: 1;
+        }
+        .container .card .imgBx img{
+            max-width: 120%;
+            max-height: 420px;
+            border-radius: 4px;
+        }
+        .container .card .content{
+            position: relative;
+            margin-top: -140px;
+            padding: 10px 15px;
+            text-align: center;
+            color: #111;
+            visibility: hidden;
+            opacity: 0;
+            transition: 0.3s ease-in-out;
+        }
+        .container .card:hover .content{
+            visibility: visible;
+            opacity: 1;
+            margin-top: -40px;
+            transition-delay: 0.3s;
+        }
+        </style>
+</head>
+<body>
+    <div id="start">
+        <header>
+            <div id="progressbar"></div>
+            <div id="scrollPath"></div>
+            <a class="" id="elixir" href="" >Project Elixir</a>
+            <ul>
+                <li><a class="active" href="Animal Home.html">Home</a></li>
+                <li><a class="nactive" href="Animal Discover.html">Discover</a></li>
+                <li><a class="nactive" href="Animal Donate.html">Donate</a></li>
+                <li><a class="nactive" href="https://www.spacex.com/">SpaceX</a></li>
+                <li><a class="nactive" href="https://www.nationalgeographic.com/">National Geographic</a></li>
+            </ul>
+        </header>
+        <div id="ft">
+            <h2 id="text">We are on a mission to save our planet...<br></h2>
+        </div>
+    </div>
+    <div id="back2">
+        <div id="ft">
+            <h2 id="text2">Project Elixir was founded by Ritvik Vuppala on the 8th of November 2021. He had a mission to save<br>the millions of endangered animals and to recover the Earth's 
+                beauty that it stored hundreds of years before.<br> We are spread across 6 continents and have rescue centers in over 60 countries. We are working with <a href="https://www.spacex.com/">SpaceX</a> and<br> 
+                <a href="https://www.nationalgeographic.com/">National Geographic</a> in order to start making a change for the better.
+            </h2>
+        </div><br><br><br>
+    </div>
+    <div id="back1">
+        <div class="container">
+            <div class="card">
+                <div class="imgBx">
+                    <img src="https://images.fineartamerica.com/images/artworkimages/mediumlarge/2/african-elephant-baby-loxodonta-africana-elizabeth-delaney.jpg" alt="" >
+                </div>
+                <div class="content">
+                    <h2>Meet Jumbo</h2>
+                    <p>Jumbo was stranded on a small island in the watering hole when the tide rose, he was cut off from his herd as was left without foos for days. 
+                        That was before we came to his rescue and broght him to safety. We reunited him with his delighted mother and now he is our African Ambassador.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="imgBx">
+                    <img src="https://tse3.mm.bing.net/th?id=OIP.h6hQLWuO7Dq4jdrorfo2rwHaLH&pid=Api" alt="" >
+                </div>
+                <div class="content">
+                    <h2>Patrick Star</h2>
+                    <p>Patrick Star was swimming for fish alone when he got lost and trapped ina cave, but luckily we were monitoring his waddle and we we able to fetch him just in time to
+                        save his life, now he follows our antartic exploration team around everywhere. You may have guessed that we named him patrik after the spongebob character that lives 
+                        in a rock under the sea!
+                    </p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="imgBx">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Iceland-1979445_(cropped_3).jpg/1200px-Iceland-1979445_(cropped_3).jpg" alt=""  width="300px" height="446px">
+                </div>
+                <div class="content">
+                    <h2>Snowy</h2>
+                    <p>When our chartographers where mapping out Canada's Northern tundra, they didn't notice snowy sneak into the car ride home. So when Stevey(The pack leader), opened the 
+                       car boot, he got quite a shock to find snowy snuggled up by the binoculars. Ever since snowy would always stick around when we send teams up to the highly populated tundra,
+                       he even shows us some of his cool tricks. 
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="back2" style="height: 850px;">
+        <div id="ft">
+            <h2 id="text2">
+                If you want to donate to the cause please check out this <a href="Animal Donate.html" style="text-decoration: none; color: rgb(253, 122, 0);">link</a>.
+            </h2>
+        </div><br><br><br>
+    </div>
+</body>
+<script type="text/javascript">
+    let progress = document.getElementById('progressbar');
+    let totalHeight = document.body.scrollHeight -
+     window.innerHeight;
+    window.onscroll = function(){
+        let progressHeight = (window.pageYOffset / totalHeight) * 100;
+        progress.style.height = progressHeight + "%"
+        
+    }
+</script>
+</html>

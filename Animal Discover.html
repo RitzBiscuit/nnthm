@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <title>Project Elixir</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        #start{
+            min-height: 100vh;
+            background: linear-gradient(#2b1055,#7597de);
+        }
+        ::-webkit-scrollbar{
+            width: 0;
+        }
+        #scrollPath{
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 10px;
+            height: 100%;
+            background: rgba(255,255,255,0.05);
+        }
+        #progressbar{
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 10px;
+            background: linear-gradient(to top, #008aff, #00ffe7);
+            animation: animate 5s  linear infinite;
+        }
+        @keyframes animate{
+            0%,100%{
+                filter: hue-rotate(0deg);
+            }
+            50%{
+                filter: hue-rotate(360deg);
+            }
+        }
+        #progressbar:before{
+            content:  '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to top, #008aff, #00ffe7);
+            filter: blur(10px);
+        }
+        #progressbar:after{
+            content:  '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to top, #008aff, #00ffe7);
+            filter: blur(30px);
+        }
+        #elixir{
+            color: #fff;
+            font-weight: 700;
+            text-decoration: none;
+            font-size: 2em;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        header{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 30px 100px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header ul{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        header ul li{
+            list-style: none;
+            margin-left: 20px;
+        }
+        header ul li a{
+            text-decoration: none;
+            padding: 6px 15px;
+            color: #fff;
+            border-radius: 20px;
+        }
+        header ul li a:hover ,
+        header ul li a.active
+        {
+            background: #fff;
+            color: #2b1055;
+        }
+        #section{
+            width: 100%;
+            height: 100vh;
+            padding: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        #text{
+            position: absolute;
+            color: #fff;
+            white-space: nowrap;
+            font-size: 3em;
+            font-family: "Poppins", sans-serif;
+        }
+        #back1{
+            background: #7597de;
+            min-height: 400pxpx;
+            display: flex;
+            padding: 80px;
+        }
+        #title{
+            font-family: monospace;
+            font-size: 30px;
+            color: #fff;
+            letter-spacing: 1px;
+        }
+        #writing{
+            font-family: monospace;
+            font-size: 20px;
+            color: #fff;
+            letter-spacing: 0.7px;
+        }
+        #ima{
+            width: 300px;
+            height: 200px;
+        }
+        </style>
+</head>
+<body>
+    <div id="start">
+        <header>
+            <div id="progressbar"></div>
+            <div id="scrollPath"></div>
+            <a class="nav-link" id="elixir" href="">Project Elixir</a>
+            <ul>
+                <li><a class="nactive" href="Animal Home.html">Home</a></li>
+                <li><a class="active" href="Animal Discover.html">Discover</a></li>
+                <li><a class="nactive" href="Animal Donate.html">Donate</a></li>
+                <li><a class="nactive" href="https://www.spacex.com/">SpaceX</a></li>
+                <li><a class="nactive" href="https://www.nationalgeographic.com/">National Geographic</a></li>
+            </ul>
+        </header>
+        <div id="section">
+            <h2 id="text">Discover.<br></h2>
+        </div>
+    </div>
+    <div id="back1">
+       <h2 id="title"><b><u>Asia</u></b></h2><br><br><br><br><br>
+       <br><br><img src="http://ourmarinespecies.com/wp-content/uploads/2018/09/hooded_seals_2.jpg" alt="" id="ima">
+       <p id="writing">
+           We can be found in every county in asia, where we have offices, scout camps and campaigns towards a better world. On the 09th of November 2021, we organisned a 
+           campaign in Russia on the ban of seal hunting. every day, about 20 seals are killed for their insulating skin inRussia and, this is rapidly worsening their position on the 
+           species list. Recently, we sent a letter to the Domestic Administration in China, protesting against the slaughter of shark species. After this, the Administration passed
+            the law that shark hunting must be given permission to be allowed.
+       </p>
+    </div>
+    <div id="back1">
+        <h2 id="title"><b><u>Africa</u></b></h2><br><br>
+        <img src="http://philip.greenspun.com/images/200705-botswana-vumbura/elephants-with-baby-watering-hole.3.jpg" alt="" id="ima">
+        <p id="writing">
+            Our influence concerning african wildlife isn't that great, but I can tell you it is getting more influential every day. We are involed in nearly all aspects of the African 
+            wildlife. From savannahs in Kenya to deserts in Egypt. We are literally everywhere. On the 10th of November 2021, we artificially dug out a new water hole for the inhabitants of
+            Serengeti National Park in Tanzania. This is now a safe haven for elephants and gazelles that visit the site everyday.
+        </p>
+     </div>
+     <div id="back1">
+        <h2 id="title"><b><u>North America</u></b></h2><br><br>
+        <img src="https://images.fineartamerica.com/images-medium-large-5/9-bald-eagle-nesting-mark-newman.jpg" alt="" id="ima">
+        <p id="writing">
+            In North America, we have only recently been given clearance to set up nesting sites for the decreasing population of bald eagles. Since that successful day the 
+            population has exploded. We have also been tracking downa cold, lost and frightened herd of bison who have been lost in the cold reaches of Canada. Only Yesterday we successfully 
+            led them out the wolf mountain valley and they are now safely on track to reach their home in Idaho.
+        </p>
+     </div>
+     <div id="back1">
+        <h2 id="title"><b><u>South America</u></b></h2><br><br>
+        <img src="https://c402277.ssl.cf1.rackcdn.com/photos/734/images/story_full_width/Forest_7.25.2012_AmazonPhotoGallery.jpg?1345528938" alt="" id="ima">
+        <p id="writing">
+        In the amazon rainforest, we have been saving countless animals from the dangerous forest fires and floods that occur there every day.
+        </p>
+     </div>
+     <div id="back1">
+        <h2 id="title"><b><u>Austrailia</u></b></h2><br><br>
+        <img src="https://wallup.net/wp-content/uploads/2018/10/06/514141-kangaroo-marsupial.jpg" alt="" id="ima">
+        <p id="writing">
+        In Australia we have reunioted thousands of kangaroos, and rescued hundreds of sloths from a slow death.
+        </p>
+     </div>
+</body>
+<script type="text/javascript">
+    let progress = document.getElementById('progressbar');
+    let totalHeight = document.body.scrollHeight -
+     window.innerHeight;
+    window.onscroll = function(){
+        let progressHeight = (window.pageYOffset / totalHeight) * 100;
+        progress.style.height = progressHeight + "%"
+        
+    }
+</script>
+</html>
